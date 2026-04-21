@@ -1,0 +1,25 @@
+project_name: "CORNLARVA_SOTA_Base"
+
+data_root: "/data4/Agri/yukaijie/VIT/datasets/cornlarva/" 
+checkpoints_dir: "./checkpoints/cornlarva/"
+log_dir: "./logs/"
+resume_path: 
+
+device: "cuda:1"
+num_workers: 8
+seed: 3407
+
+input_size: 224
+num_classes: 8
+batch_size: 32
+
+epochs: 50
+learning_rate: 1.0e-4
+min_lr: 1.0e-6
+weight_decay: 0.05
+dropout_rate: 0.3
+label_smoothing: 0.1
+patience: 20
+
+backbone: "convnextv2_base"
+pretrained_path: "./checkpoints/convnextv2_base.pth"
